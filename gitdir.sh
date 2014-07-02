@@ -6,7 +6,7 @@ if [[ -d $DIR/.git ]] ; then
 	if [[ $(git status | grep 'nothing to commit') ]] ; then
 		echo -e "$(tput bold)$(tput setaf 5)$DIR$(tput sgr0)$(tput setaf 6) is up to date.$(tput sgr0)"
 	elif [[ $(git status | egrep -w 'Changes not staged|Uncommitted|unstage') ]] ; then
-		echo -e "$(tput bold)$(tput setaf 5)$DIR$(tput sgr0)$(tput setaf 1) has untracked, uncommitted, or modified files."
+		echo -e "$(tput bold)$(tput setaf 5)$DIR$(tput sgr0)$(tput setaf 1) has untracked, uncommitted, or modified files.$(tput sgr0)"
 	fi 
 popd >/dev/null 2>&1
 fi
